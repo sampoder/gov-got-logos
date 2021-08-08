@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Input, Select, Flex, Box } from "theme-ui";
+import Head from 'next/head'
 
 export default function Home() {
   const [inputValues, setInputValues] = useState({
@@ -17,6 +18,10 @@ export default function Home() {
   };
   return (
     <div style={{ textAlign: "center" }}>
+      <Head>
+        <title>Australian Government Logo Generator</title>
+        <meta property="og:image" content="https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=Logo%20Generator&height=600">
+      </Head>
       <img
         src={`https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=${
           inputValues.headingType == "Sub-heading" ? "%7C" : ""
