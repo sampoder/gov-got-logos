@@ -20,7 +20,7 @@ export default function Home() {
     <div style={{ textAlign: "center" }}>
       <Head>
         <title>Australian Government Logo Generator</title>
-        <meta property="og:image" content="https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=Logo%20Generator&height=600">
+        <meta property="og:image" content="https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=Logo%20Generator&height=600" />
       </Head>
       <img
         src={`https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=${
