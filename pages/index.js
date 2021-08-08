@@ -34,8 +34,8 @@ export default function Home() {
       <div sx={{ width: "600px", maxWidth: "90vw", margin: "auto" }}>
         <div sx={{ mb: 2 }}>
           <Select name="style" onChange={handleOnChange}>
+            <option>Stacked</option>
             <option>Inline</option>
-            <option value="2">Stacked</option>
           </Select>
         </div>
         <Flex sx={{ width: "100%", mt: 2 }}>
