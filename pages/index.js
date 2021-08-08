@@ -8,6 +8,7 @@ export default function Home() {
   const [inputValues, setInputValues] = useState({
     name: "",
     headingType: "Heading",
+    style: "Stacked"
   });
 
   const [additionalLinesAmount, setAdditionalLinesAmount] = useState(0);
@@ -23,7 +24,7 @@ export default function Home() {
         <meta property="og:image" content="https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=Logo%20Generator&height=600" />
       </Head>
       <img
-        src={`https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=${
+        src={`https://api-gov-au-crest-branding.apps.y.cld.gov.au/${style == "Stacked" ? "stacked" : "inline"}.png?agency=${
           inputValues.headingType == "Sub-heading" ? "%7C" : ""
         }${inputValues.name}${[...Array(additionalLinesAmount)].map((u, i) => inputValues["name-"+i] === undefined ? '' : `&agency=${
           inputValues["headingType-"+i] == "Sub-heading" ? "%7C" : ""
@@ -32,7 +33,7 @@ export default function Home() {
       />
       <div sx={{ width: "600px", maxWidth: "90vw", margin: "auto" }}>
         <div sx={{ mb: 2 }}>
-          <Select>
+          <Select name="style" onChange={handleOnChange}>
             <option>Inline</option>
             <option value="2">Stacked</option>
           </Select>
