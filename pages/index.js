@@ -21,10 +21,10 @@ export default function Home() {
     <div style={{ textAlign: "center" }}>
       <Head>
         <title>Australian Government Logo Generator</title>
-        <meta property="og:image" content="https://api-gov-au-crest-branding.apps.y.cld.gov.au/stacked.png?agency=Logo%20Generator&height=600" />
+        <meta property="og:image" content="https://aus-crest.vercel.app/stacked.png?agency=Logo%20Generator&height=600" />
       </Head>
       <img
-        src={`https://api-gov-au-crest-branding.apps.y.cld.gov.au/${inputValues.style == "Stacked" ? "stacked" : "inline"}.png?agency=${
+        src={`https://aus-crest.vercel.app/${inputValues.style == "Stacked" ? "stacked" : "inline"}.png?agency=${
           inputValues.headingType == "Sub-heading" ? "%7C" : ""
         }${inputValues.name}${[...Array(additionalLinesAmount)].map((u, i) => inputValues["name-"+i] === undefined ? '' : `&agency=${
           inputValues["headingType-"+i] == "Sub-heading" ? "%7C" : ""
